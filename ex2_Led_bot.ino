@@ -1,14 +1,17 @@
-int BOTAO = 2;
-int LED = 13;
+int BOTAO = 5;
+int LED = 9;
 
 void setup() {
   pinMode(LED, OUTPUT);
   pinMode(BOTAO, INPUT);
 }
-void loop() {
+
+void loop() {  
   if (digitalRead(BOTAO) == HIGH) {
-    digitalWrite(LED, LOW);
+    digitalWrite(LED, HIGH); 
+    delay(1000);
   } else {
-    digitalWrite(LED, HIGH);
+    digitalWrite(LED, LOW);
+    
   }
 }
